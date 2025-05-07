@@ -13,7 +13,7 @@ export default function Intro() {
     // style={{ backgroundImage: "url('/test1.jpg')" }}>  
     <>
     {/* <br></br> */}
-    <main className="h-screen bg-black relative bg-cover bg-center bg-no-repeat" 
+    <main id='expertise' className="h-screen bg-black relative bg-cover bg-center bg-no-repeat" 
 >
     <motion.div 
       className="w-full h-full flex items-center justify-center text-black text-[64px] leading-[66px] cursor-default absolute bg-[#ec4e39]"
