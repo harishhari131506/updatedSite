@@ -7,11 +7,13 @@ export default function Intro() {
 
     const [isHovered, setIsHovered] = useState(false);
     const { x, y } = useMousePosition();
-    const size = isHovered ? 400 : 40;
+    const size = isHovered ? 350 : 40;
   return (
     // <main className="h-screen bg-grey-800 relative bg-cover bg-center bg-no-repeat" 
     // style={{ backgroundImage: "url('/test1.jpg')" }}>  
-      <main className="h-screen bg-grey-900 relative bg-cover bg-center bg-no-repeat" 
+    <>
+    {/* <br></br> */}
+    <main className="h-screen bg-black relative bg-cover bg-center bg-no-repeat" 
 >
     <motion.div 
       className="w-full h-full flex items-center justify-center text-black text-[64px] leading-[66px] cursor-default absolute bg-[#ec4e39]"
@@ -43,5 +45,7 @@ export default function Intro() {
       </p>
     </div>
   </main>
+    </>
+  
   )
 }
