@@ -112,7 +112,7 @@ export default function AboutSection() {
       {/* Matrix Rain Background */}
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full z-0 opacity-15"
+        className="absolute inset-0 w-full h-full z-0 opacity-25"
       />
 
       {/* Content Container */}

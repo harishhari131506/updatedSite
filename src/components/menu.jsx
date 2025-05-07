@@ -5,22 +5,25 @@ import Nav from './Nav';
 
 const menu = {
   open: {
-    width: "480px",
-    height: "650px",
+    width: "430px",
+    height: "560px",
     top: "-25px",
     right: "-25px",
-    transition: { duration: 0.75, type: "tween", ease: [0.76, 0, 0.24, 1]}
+    transition: {
+      duration: 0.75, type: "spring", stiffness: 120, damping: 20
+    }
   },
   closed: {
     width: "100px",
     height: "40px",
     top: "0px",
     right: "0px",
-    transition: { duration: 0.75, delay: 0.35, type: "tween", ease: [0.76, 0, 0.24, 1]}
+    transition: {
+      duration: 0.75, delay: 0.35, type: "spring", stiffness: 120, damping: 20
+    }
   }
 }
 
-// Responsive variants for smaller screens
 const responsiveMenu = {
   open: {
     width: "90vw",
@@ -29,14 +32,14 @@ const responsiveMenu = {
     maxHeight: "650px",
     top: "-25px",
     right: "-25px",
-    transition: { duration: 0.75, type: "tween", ease: [0.76, 0, 0.24, 1]}
+    transition: { duration: 0.75, type: "spring", stiffness: 120, damping: 20}
   },
   closed: {
     width: "100px",
     height: "40px",
     top: "0px",
     right: "0px",
-    transition: { duration: 0.75, delay: 0.35, type: "tween", ease: [0.76, 0, 0.24, 1]}
+    transition: { duration: 0.75, delay: 0.35,type: "spring", stiffness: 120, damping: 20}
   }
 }
 
@@ -46,17 +49,27 @@ export default function MenuC() {
 
   return (
     <div className="fixed right-6 sm:right-8 md:right-12 lg:right-16 top-6 sm:top-8 md:top-12 lg:top-16 z-200">
-      <motion.div 
-        className="bg-[#c9fd74] rounded-3xl relative"
+      <motion.div layout
+        className="bg-gray-900 rounded-3xl relative"
         variants={isMobile ? responsiveMenu : menu}
         animate={isActive ? "open" : "closed"}
         initial="closed"
       >
         <AnimatePresence>
-          {isActive && <Nav />}
+          {isActive && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Nav />
+            </motion.div>
+          )}
         </AnimatePresence>
       </motion.div>
-      <Button isActive={isActive} toggleMenu={() => {setIsActive(!isActive)}}/>
+      <Button isActive={isActive} toggleMenu={() => { setIsActive(!isActive) }} />
+
     </div>
   )
 }

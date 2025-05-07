@@ -29,7 +29,7 @@ export default function ProjectSection() {
   const [modal, setModal] = useState({ active: false, index: 0 });
 
   return (
-    <main className="w-full h-screen bg-black flex justify-center">
+    <main id="projects" className="w-full h-screen bg-black flex justify-center">
       <div className="w-full md:w-4/5 mx-auto">
         {projects.map((project, index) => {
           return <ProjectAc index={index} title={project.title} setModal={setModal} key={index} />;

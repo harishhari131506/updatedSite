@@ -1,3 +1,25 @@
+  export const slideIn = {
+    initial: { opacity: 0, y: 10, scale: 0.98 },
+    enter: (i = 0) => ({
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        delay: i * 0.03,
+        type: "spring",
+        stiffness: 70,
+        damping: 16,
+        mass: 0.5
+      }
+    }),
+    exit: {
+      opacity: 0,
+      y: 10,
+      scale: 0.98,
+      transition: { duration: 0.2 }
+    }
+  };
+  
 export const perspective = {
     initial: {
         opacity: 0,
@@ -20,25 +42,5 @@ export const perspective = {
     exit: {
         opacity: 0,
         transition: { duration: 0.5, type: "linear", ease: [0.76, 0, 0.24, 1]}
-    }
-}
-
-export const slideIn = {
-    initial: {
-        opacity: 0,
-        y: 20
-    },
-    enter: (i) => ({
-        opacity: 1,
-        y: 0,
-        transition: { 
-            duration: 0.5,
-            delay: 0.75 + (i * 0.1), 
-            ease: [.215,.61,.355,1]
-        }
-    }),
-    exit: {
-        opacity: 0,
-        transition: { duration: 0.5, type: "tween", ease: "easeInOut"}
     }
 }

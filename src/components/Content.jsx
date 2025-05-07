@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, useMotionValue, useSpring, animate } from "framer-motion";
 import { Mail, Phone } from "lucide-react";
+
 export default function ContactSection() {
   const [isEmailCopied, setIsEmailCopied] = useState(false);
   const [isPhoneCopied, setIsPhoneCopied] = useState(false);
@@ -173,7 +174,7 @@ export default function ContactSection() {
   };
  
   return (
-    <div className="bg-[#2D2C43] min-h-screen text-white flex flex-col justify-between py-8 px-4 md:px-12 relative">
+    <div id="contact" className="bg-[#2D2C43] min-h-screen text-white flex flex-col justify-between py-8 px-4 md:px-12 relative">
       {/* Header Section */}
       <div className="flex items-center mb-20 relative">
         <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-gray-400 overflow-hidden mr-4 mt-20">
@@ -299,7 +300,9 @@ export default function ContactSection() {
           </div>
         </motion.div>
       </div>
- 
+      <div className="mt-12 text-center text-gray-400 text-sm">
+          © Harish {new Date().getFullYear()} • Made with passion
+        </div>
  
     </div>
   );

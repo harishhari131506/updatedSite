@@ -9,7 +9,7 @@ export default function Button({ isActive, toggleMenu }) {
         transition={{ duration: 0.5, type: "tween", ease: [0.76, 0, 0.24, 1] }}
       >
         <div 
-          className="w-full h-full bg-[#c9fd74] group"
+          className="w-full h-full bg-gray-900 group"
           onClick={() => {toggleMenu()}}
         >
           <PerspectiveText label="Menu" />
@@ -18,14 +18,14 @@ export default function Button({ isActive, toggleMenu }) {
           className="w-full h-full bg-black group"
           onClick={() => {toggleMenu()}}
         >
-          <PerspectiveText label="Close" textColor="text-[#c9fd74]" />
+          <PerspectiveText label="Close" textColor="text-[#fff]" />
         </div>
       </motion.div>
     </div>
   )
 }
 
-function PerspectiveText({ label, textColor = "text-black" }) {
+function PerspectiveText({ label, textColor = "text-white" }) {
   return (    
     <div className="flex flex-col justify-center items-center h-full w-full transform-gpu preserve-3d transition-transform duration-[0.75s] ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:rotate-x-90">
       <p className={`${textColor} pointer-events-none uppercase transition-all duration-[0.75s] ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:-translate-y-full group-hover:opacity-0`}>
