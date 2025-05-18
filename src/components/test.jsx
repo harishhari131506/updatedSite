@@ -644,9 +644,9 @@ const LandingPage = () => {
 
       <AboutSection />
 
-      {/* <ProjectSection /> */}
-      <SkillsSection />
-      {/* <FooterMain /> */}
+      <ProjectSection />
+      {/* <SkillsSection /> */}
+      <FooterMain />
     </>
   );
 };
