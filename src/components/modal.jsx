@@ -36,6 +36,12 @@ export default function Modal({ modal, projects }) {
     });
   }, []);
 
+  const handleClick = () => {
+    if (active && index >= 0 && index < projects.length) {
+      window.open(projects[index].link, '_blank');
+    }
+  };
+
   return (
     <>
       <motion.div 
@@ -44,6 +50,7 @@ export default function Modal({ modal, projects }) {
         initial="initial" 
         animate={active ? "enter" : "closed"} 
         className="h-64 w-64 md:h-80 md:w-96 lg:h-88 lg:w-96 absolute bg-white overflow-hidden pointer-events-none flex items-center justify-center"
+        onClick={handleClick}
       >
         <div 
           style={{ top: index * -100 + "%" }} 
@@ -59,7 +66,7 @@ export default function Modal({ modal, projects }) {
               >
                 <img 
                   src={`/${src}`}
-                  width={300}
+                  width={350}
                   height={0}
                   alt="image"
                   className="h-auto"
@@ -72,7 +79,7 @@ export default function Modal({ modal, projects }) {
       
       <motion.div 
         ref={cursor} 
-        className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-blue-600 text-white absolute z-10 flex items-center justify-center pointer-events-none" 
+        className="w-14 h-14 md:w-20 md:h-20 rounded-full bg-blue-600 text-white absolute z-10 flex items-center justify-center pointer-events-none" 
         variants={scaleAnimation} 
         initial="initial" 
         animate={active ? "enter" : "closed"}
@@ -80,7 +87,7 @@ export default function Modal({ modal, projects }) {
       
       <motion.div 
         ref={cursorLabel} 
-        className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-transparent text-white absolute z-10 flex items-center justify-center text-sm font-light pointer-events-none" 
+        className="w-14 h-14 md:w-20 md:h-20 rounded-full bg-transparent text-white absolute z-10 flex items-center justify-center text-sm font-light pointer-events-none" 
         variants={scaleAnimation} 
         initial="initial" 
         animate={active ? "enter" : "closed"}

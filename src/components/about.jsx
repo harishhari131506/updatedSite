@@ -107,12 +107,11 @@ export default function AboutSection() {
       style={{
         fontFamily: "Lato",
       }}
-      id="about"
     >
       {/* Matrix Rain Background */}
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full z-0 opacity-25"
+        className="absolute inset-0 w-full h-full z-0 opacity-15"
       />
 
       {/* Content Container */}

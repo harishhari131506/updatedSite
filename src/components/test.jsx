@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect, useRef } from "react";
 import {
   motion,
@@ -26,8 +24,9 @@ import CanvasBackground from "./CanvasBackground";
 import AboutSection from "./about";
 import MenuC from "./menu";
 import ProjectSection from "./project";
+import SkillsSection from "./skillsSection";
 import FooterMain from "./footerMain";
-import SkillsSection from "./skills";
+
 
 const AnimatedText = ({ text, className }) => {
   return (
@@ -645,8 +644,9 @@ const LandingPage = () => {
       <AboutSection />
 
       <ProjectSection />
-      {/* <SkillsSection /> */}
-      <FooterMain />
+      <SkillsSection/>
+
+      <FooterMain/>
     </>
   );
 };
