@@ -23,8 +23,8 @@ const Section1 = () => {
 const Section2 = () => {
     return (
         <div className='flex justify-between items-end mt-16 pb-8'>
-            <h1 className='text-[8vw] md:text-[10vw] leading-[0.8] mt-10'>Let's Connect</h1>
-            <p className='text-gray-400 text-sm'>©copyright</p>
+            {/* <h1 className='text-[8vw] md:text-[10vw] leading-[0.8] mt-10'>Let's Connect</h1> */}
+            <p className='text-gray-400 text-sm'>©copyright Harish</p>
         </div>
     )
 }

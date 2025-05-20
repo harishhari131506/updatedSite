@@ -24,7 +24,7 @@ import CanvasBackground from "./CanvasBackground";
 import AboutSection from "./about";
 import MenuC from "./menu";
 import ProjectSection from "./project";
-import SkillsSection from "./skillsSection";
+// import SkillsSection from "./skillsSection";
 import FooterMain from "./footerMain";
 
 
@@ -644,7 +644,7 @@ const LandingPage = () => {
       <AboutSection />
 
       <ProjectSection />
-      <SkillsSection/>
+      {/* <SkillsSection/> */}
 
       <FooterMain/>
     </>
