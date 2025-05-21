@@ -252,83 +252,12 @@ const LandingPage = () => {
             }}
           />
 
-          {/* Floating particles */}
-          {Array.from({ length: 20 }).map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute rounded-full bg-cream opacity-10"
-              style={{
-                width: Math.random() * 10 + 2,
-                height: Math.random() * 10 + 2,
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                y: [0, Math.random() * 100 - 50],
-                opacity: [0.1, 0.3, 0.1],
-              }}
-              transition={{
-                duration: Math.random() * 10 + 10,
-                repeat: Infinity,
-                repeatType: "reverse",
-              }}
-            />
-          ))}
-
-          {/* Left decorative line */}
-          <motion.div
-            className="absolute left-10 top-0 bottom-0 w-px bg-cream/20"
-            initial={{ scaleY: 0, opacity: 0 }}
-            animate={{ scaleY: 1, opacity: 1 }}
-            transition={{ duration: 1.5, delay: 0.2 }}
-          >
-            <motion.div
-              className="absolute top-0 left-0 w-1 h-10 bg-cream"
-              animate={{
-                y: ["0%", "95%", "0%"],
-              }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            />
-          </motion.div>
-
-          {/* Right decorative line */}
-          <motion.div
-            className="absolute right-10 top-0 bottom-0 w-px bg-cream/20"
-            initial={{ scaleY: 0, opacity: 0 }}
-            animate={{ scaleY: 1, opacity: 1 }}
-            transition={{ duration: 1.5, delay: 0.3 }}
-          >
-            <motion.div
-              className="absolute top-0 left-0 w-1 h-10 bg-cream"
-              animate={{
-                y: ["95%", "5%", "95%"],
-              }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 0.5,
-              }}
-            />
-          </motion.div>
-
           {/* Decorative circles */}
           <motion.div
             className="absolute bottom-20 right-40 border border-cream/10 rounded-full z-10"
             initial={{ width: 0, height: 0, opacity: 0 }}
             animate={{ width: 300, height: 300, opacity: 0.5 }}
             transition={{ duration: 1, delay: 0.8 }}
-          />
-
-          <motion.div
-            className="absolute top-40 left-20 border border-cream/5 rounded-full z-10"
-            initial={{ width: 0, height: 0, opacity: 0 }}
-            animate={{ width: 150, height: 150, opacity: 0.3 }}
-            transition={{ duration: 1, delay: 1 }}
           />
 
           <div className="container mx-auto px-4 sm:px-6 relative z-10">
@@ -457,12 +386,12 @@ const LandingPage = () => {
                       transition={{ duration: 0.5, delay: 1.4 }}
                     >
                       <motion.button
-                        className="group flex items-center space-x-2 bg-cream text-black px-6 py-3 rounded-full font-medium relative overflow-hidden"
+                        className="group cursor-pointer z-[999] flex items-center space-x-2 bg-cream  px-6 py-3 rounded-full font-medium relative overflow-hidden"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
                         <motion.span
-                          className="absolute inset-0 bg-white"
+                          className="absolute inset-0  bg-cream/10"
                           initial={{ x: "-100%" }}
                           whileHover={{ x: "0%" }}
                           transition={{ duration: 0.3 }}
@@ -478,12 +407,12 @@ const LandingPage = () => {
                       </motion.button>
 
                       <motion.button
-                        className="border border-cream/50 text-cream px-6 py-3 rounded-full font-medium relative overflow-hidden"
+                        className="border cursor-pointer border-cream/50 text-cream px-6 py-3 rounded-full font-medium relative overflow-hidden"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
                         <motion.span
-                          className="absolute inset-0 bg-cream/10"
+                          className="absolute inset-0 bg-cream/10 z-1000"
                           initial={{ y: "-100%" }}
                           whileHover={{ y: "0%" }}
                           transition={{ duration: 0.3 }}
@@ -594,49 +523,7 @@ const LandingPage = () => {
               </motion.div>
             </motion.div>
 
-            {/* Scroll indicator */}
-            {/* <motion.div 
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ 
-            duration: 0.5, 
-            delay: 2,
-          }}
-        >
-          <motion.div 
-            className="w-6 h-10 rounded-full border-2 border-cream/30 flex justify-center"
-            whileHover={{ borderColor: "rgba(255, 253, 245, 0.6)" }}
-          >
-            <motion.div 
-              className="w-1 h-2 bg-cream/50 rounded-full mt-2"
-              animate={{ 
-                y: [0, 12, 0],
-                opacity: [0.5, 1, 0.5]
-              }}
-              transition={{ 
-                duration: 2, 
-                repeat: Infinity,
-                repeatType: "loop",
-                ease: "easeInOut" 
-              }}
-            />
-          </motion.div>
-          <motion.p 
-            className="text-cream/50 text-xs mt-2 text-center"
-            animate={{ 
-              opacity: [0.5, 1, 0.5]
-            }}
-            transition={{ 
-              duration: 2, 
-              repeat: Infinity,
-              repeatType: "loop",
-              ease: "easeInOut" 
-            }}
-          >
-            Scroll Down
-          </motion.p>
-        </motion.div> */}
+        
           </div>
         </motion.section>
       </div>
