@@ -138,7 +138,7 @@ const handleSubmit = async (e) => {
   try {
     // Replace with your Google Apps Script web app URL
     // This is the URL you get after deploying your Apps Script as a web app
-    const scriptUrl = 'https://script.google.com/macros/s/AKfycbwAx5UtFIgba5ZkPzqMeyjNezrJmDkUo4NJSGAS8rfFI5mwJ1gfp34uIhL0XQGfPuq7vg/exec';
+    const scriptUrl = 'https://script.google.com/macros/s/AKfycby9FP3ykyFkI4vYz79i2g7Fv8tLd46EzPF50Y2ThLeGsa96o5OnisdKQZzbjGjc5nUAFw/exec';
     
     // Send data to Google Apps Script
     const response = await fetch(scriptUrl, {
@@ -265,6 +265,11 @@ const handleSubmit = async (e) => {
     </div>
   );
 }
+
+
+
+
+
 // import { useState, useRef, useEffect } from "react";
 // import { motion, useMotionValue, animate } from "framer-motion";
 
