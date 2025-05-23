@@ -22,9 +22,14 @@ const Section1 = () => {
 
 const Section2 = () => {
     return (
-        <div className='flex justify-between items-end mt-16 pb-8'>
+        <div className='flex justify-between items-center mt-16 pb-8'>
             {/* <h1 className='text-[8vw] md:text-[10vw] leading-[0.8] mt-10'>Let's Connect</h1> */}
             <p className='text-gray-400 text-sm'>©copyright Harish</p>
+
+              <div className="inline-flex items-center px-4 py-2 bg-gray-900/50 backdrop-blur-sm border border-gray-800/50 rounded-full text-sm text-gray-400 mb-6">
+            <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+            Available for new opportunities
+          </div>
         </div>
     )
 }

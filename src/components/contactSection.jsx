@@ -171,6 +171,7 @@ const handleSubmit = async (e) => {
       <div className="max-w-6xl mx-auto">
         {/* Top heading with gradient effect */}
         <div className="text-center mb-16">
+         
           <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
             Let's Connect
           </h2>
